@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <head><title> STL County vs City Violent Crime Comparsion </title></head>
+
+    <body class="w3-center">
+    <h2> Is St. Louis City's violent crime reporting misleading? </h2>
+    <p> This is the question I asked myself when I began research about the reputation of the St. Louis area. 
+        After all, St. Louis City frequently appears as a top 10 entry in violent city lists. I've always just
+        glanced over this, and took it completely at face value that St. Louis City is very dangerous. Although,
+        while researching the reputation of St. Louis City, I discovered that the city and the county had split 
+        apart from each other in 1876 in an extremely narrow vote. This makes St. Louis one of only three independent
+        cities (St. Louis, Missouri; Baltimore, Maryland; Carson City, Nevada) outside of Virginia (which has different rules for cities). This immediately
+        made my brain shift to how St. Louis City being independent affects the crime data of the area. So from there, my research pivoted.
+        I wanted to create a combined dataset to show how St. Louis crime would be represented if it was still combined with St. Louis County. 
+        First, I needed to figure out what metric is used to measure how "dangerous" a city is. As I have never analyzed any crime-related 
+        data before this, I needed to know what sort of data I was looking for for this analysis. Looking at multiple lists of the "most dangerous cities in the U.S," 
+        I figured out that they used a metric of violent crime rate per 100,000 people. This is a relatively simple number to calculate.
+        The equation for violent crime rate per 100,000 is: (Total Incidents/Total Population) * 100,000. From there, I needed to get the total incidents and total population.
+        Since I was looking at creating a combined dataset of the the violent crime in both areas, I needed to get the violent crime data from both St. Louis City and St. Louis County.
+        This made me look at what violent crime was composed of. Violent crime is composed of four separate crime categories: Homicide, Forcible Sex Offenses, Robberies, and Aggravated Assault.
+        Luckily, you can easily find the crime reports for 2021-2023 of both St. Louis City and St. Louis County relatively easily through NIBRS. St. Louis County actually has
+        their crime statistics on ArcGIS which I thought was neat since we actually covered ArcGIS in class; they have an easily navigable map composed of the data, but I was more
+        interested in the actual json files they had of their data. Once I got both the St. Louis City and St. Louis County violent crime data, I took note of it all in a spreadsheet.
+        After I had the data I needed, I needed an easy way to create a data visualization. I ended up using Flourish to create easily-embeddable graphs; below are 9 pie charts of
+        the violent crime data I recorded from the NIBRS. Each row is 2021 > 2022 > 2023; each column is County > City > Together (data).
+        <div class="flourish-embed flourish-chart" data-src="visualisation/17669333"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        These numbers came out to be pretty much around where I expected them to be. The only major difference to what I assumed is that STL County actually has only an average of
+        1430 crimes less than STL City. The majority of crime each year is aggravated assault, and STL City seems to have a pretty large amount of robberies each year. I have no
+        clue if these statistics are common knowledge, this is coming from somebody who has no bias/any idea about the crime that takes place in these areas. From this data, I was
+        able to get the number I was looking for: violent crime rate per 100,000 people. All I had to do was take the data from these pie charts and plug it into the equation
+        I stated earlier. This is the comparion graph I got:
+        <div class="flourish-embed flourish-chart" data-src="visualisation/17703164"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
+        As you can see from this graph, the combined dataset provides a much lower violent crime rate per 100,000.
+    </p>
+    <h3>Analysis</h3>
+    <p>
+        I think the combined dataset offers a much more accurate represenation of crime in the St. Louis area. Due to the fact that St. Louis City crime is reported separately
+        from St. Louis County's, you miss out on a lot of the population that St. Louis County has, which is where the majority of St. Louis residents live. St. Louis City
+        population is about ~300,000 (with the number dropping each year) and St. Louis County population is about ~990,000; together, St. Louis County makes up about 
+        77-78% of the population of the two areas combined. So when you take only the City's population into account when getting the violent crime rate per 100,000,
+        which is how St. Louis City's violent crime rate per 100,000 is reported, from an area that has most of its population living in the suburban areas,
+        I feel like you get a very unfair representation of the violent crime rate of St. Louis. The number isn't even close either. This new combined dataset number would drop
+        the city of St. Louis out of the top 10 on every list, and make it a more middle of the pack city when it comes to violent crime statistics. Obviously, this number still comes
+        with its flaws. You can still argue from these numbers that St. Louis City has a problem with robbery or that the city itself still has a major problem with crime, but I think 
+        it is more fair to the city to include the county when representing violent crime as basically every other large city has many, many suburbs included in their population, while
+        St. Louis City does not have this luxury. While not perfect, I think the comparison of the combined dataset vs. the dataset of just the city is something to keep in mind regarding
+        the reputation of St. Louis and if it is properly represented by articles about its crime, and puts St. Louis in a much more fair light than it currently is.
+    </p>
+    
+    </body>
+</html>
+
